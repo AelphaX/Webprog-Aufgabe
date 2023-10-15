@@ -1,0 +1,63 @@
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.menu-button {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    align-self: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* ... restliche CSS ... */
+
+.side-nav {
+    height: 100%;
+    width: 0; /* Das Menü ist standardmäßig nicht sichtbar */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #c3cace;
+    overflow-x: hidden;
+    transition: width 0.2s;
+    padding-top: 60px;
+    font-weight: bold;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.2); /* Add shadow */
+}
+
+/* ... restliche CSS ... */
+
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Gap between icon and text */
+    transition: color 0.2s, transform 0.2s; /* Add smooth color transition */
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+    transform: translateX(10px); /* Add subtle move effect */
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+

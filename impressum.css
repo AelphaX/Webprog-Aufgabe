@@ -1,0 +1,38 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.youtube-icon {
+    font-size: 24px;
+    color: red;
+}
+
+.linkedin-icon {
+    font-size: 24px;
+    color: #0077B5;
+}
+
+.instagram-icon {
+    font-size: 24px;
+    color: #C13584;
+}
+
+.impressum-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.impressum {
+    max-width: 800px; /* Begrenzt die Breite des Impressums */
+    margin: 0 auto; /* Zentriert das Impressum horizontal */
+    line-height: 0.5; /* Zeilenabstand im Impressum */
+    position: relative;
+}
+
+.impressum p {
+    margin: 15px 0;
+}

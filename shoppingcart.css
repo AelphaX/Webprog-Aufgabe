@@ -1,0 +1,121 @@
+.cart-icon {
+    position: absolute;
+    top: 25%;  /* Ändern Sie diesen Wert, um die vertikale Position anzupassen */
+    right: 10px;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+
+
+
+#cartCount {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    
+}
+
+#cartOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #e5dfd8;
+    border-left: 1px solid #ccc;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#cartItems {
+    margin-bottom: 20px;
+}
+
+#cartOverlay button {
+    display: inline-block;
+    background-color: #d9ccc1;
+    color: black;
+    padding: 10px 20px; /* Ich habe hier ein bisschen vertikales Padding hinzugefügt, um den Button größer zu machen. */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px; /* Ein bisschen Abstand zum oberen Element hinzufügen */
+    transition: background-color 0.3s; /* Für einen sanften Hover-Effekt */
+    border-radius: 5px;
+}
+
+#cartOverlay button:hover {
+    background-color: #c2b6a4; /* Eine etwas dunklere Farbe beim Überfahren mit der Maus */
+}
+
+.fas.fa-trash {
+    margin-left: 10px;
+    display:block;
+}
+
+
+.total-price {
+    margin-top: 20px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 50px;
+    margin-top: 7px;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.cart-controls button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #d9ccc1;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 8px;
+    padding: 0;
+    display: flex;
+   
+    padding-right: 20px;
+}
+
+.cart-controls button:hover {
+    background-color: #c2b6a4;
+}
+
+.cart-buttons {
+    display: flex;  /* Verwenden Sie Flexbox, um die Buttons nebeneinander anzuzeigen */
+    justify-content: space-between;  /* Verteilen Sie die Buttons gleichmäßig im Container */
+    margin-top: 20px;  /* Geben Sie etwas Abstand nach oben */
+}
+
+#cartOverlay button {
+    flex: 1;  /* Lassen Sie beide Buttons die gleiche Breite haben */
+    margin: 0 10px;  /* Geben Sie etwas seitlichen Abstand zwischen den Buttons */
+}

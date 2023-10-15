@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webanwendung</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shoppingcart.css">
+    <link rel="stylesheet" href="impressum.css">
+    <link rel="stylesheet" href="cookie.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="detailseite.css">
+    <link rel="stylesheet" href="anfahrt.css">
+    <link rel="stylesheet" href="responisv.css">
+    
+    <style>
+        a {
+            color: black; /* Ändert die Textfarbe des Links auf Weiß */
+            text-decoration: none; /* Entfernt die standardmäßige Unterstreichung von Links */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+
+<aside id="sideNav" class="side-nav">
+    <div id="closeButton" class="close-button">&times;</div>
+    <div id="categoryPlaceholder"></div>
+    <a href="#" onclick="showMap()">Anfahrt</a>
+    <a href="https://youtube.com/@k-jb2268?si=mc5MBLbSHsIwNkTg">Social Media</a>
+    <a href="https://www.vfb.de/">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+</aside>
+
+<header>
+    <div class="panorama">
+        <div id="menuButton" class="menu-button">&#9776;</div>
+        <h1 class="title">Beckshop</h1>
+    </div>
+    
+    
+    <div id="cartIcon" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount">0</span>
+    </div>
+    <div id="cartOverlay" style="display:none;">
+        <div id="cartItems"></div>
+        <div class="cart-buttons"> 
+            <button onclick="closeCart()">Warenkorb schließen</button>
+            <button onclick="checkout()">Kaufen</button> 
+        </div>
+    </div>
+    
+    
+
+
+</header>
+
+<div class="main-content">
+        <div class="container">
+            <div id="searchSection" id="searchSection">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Suche nach Produkten...">
+                        <button class="btn search" onclick="searchData()">Suchen</button>
+                        
+                    </div>
+                <div id="searchResults"></div>
+            </div>
+            
+            <div id="detailSection" class="section" style="display:none;">
+                <button class="btn back" onclick="goBack()">Zurück zur Suche</button>
+                <div id="detailData"></div>
+            </div>
+        </div>
+    </div>
+<footer class="impressum-container">
+    <div class="impressum">
+        <div class="social-icons">
+            <a href="https://youtube.com/@k-jb2268?si=mc5MBLbSHsIwNkTg" target="_blank" class="youtube-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://de.linkedin.com/in/jan-thome-7a11a124b" target="_blank" class="linkedin-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/konstantin_jb/" target="_blank" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>© Beck Bros AG</p>
+    </div>
+</footer>
+
+
+<div id="cookieConsentPopup" class="cookie-consent-popup">
+    Wir verwenden Cookies, um Ihnen das beste Nutzererlebnis bieten zu können. Bitte akzeptieren Sie unsere <a href="#your-cookie-policy-url">Cookie-Richtlinie</a>.
+    <button id="acceptCookies">Akzeptieren</button>
+    <button id="declineCookies">Ablehnen</button>
+</div>
+
+<div id="impressumModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Impressum</h2>
+        <div class="social-icons">
+            <!-- ... (Ihre Social-Media-Icons) ... -->
+        </div>
+        <p>Beck Bros AG</p>
+        <p>Wallstreet 123, 10001, New York</p>
+        <p>Telefon: 01234 567890 | E-Mail: <a href="https://www.karlsruhe.dhbw.de/startseite.html">kontakt@beckbros.com</a></p>
+    </div>
+</div>
+
+<div id="mapsAnfahrt" class="anfahrt">
+    <div class="anfahrt-content">
+        <span class="close">&times;</span>
+        <h2>Anfahrt</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.6329895449812!2d-74.00937352443565!3d40.70407993810118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a15fe4978df%3A0xbd606eac43f4e8d9!2s123%20Wall%20St%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sde!2sde!4v1696955343887!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="impressum.js"></script>
+<script src="shoppingcart.js"></script>
+<script src="detailseite.js"></script>
+<script src="categories.js"></script>
+<script src="anfahrt.js"></script>
+
+</body>
+</html>
+
