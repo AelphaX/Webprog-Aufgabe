@@ -16,7 +16,7 @@
 .product-details {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;        
 }
 
 .product-text {
@@ -35,11 +35,11 @@
 
 
 .product-image {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover; /* Behält das Seitenverhältnis des Bildes bei, während es den Container füllt */
     margin: auto; /* Zentriert das Bild horizontal */
-    border: 2px solid #000; /* 2px dicker, schwarzer Rahmen */
+    border: solid #e0e0e0;
     padding: 5px;
 }
 
@@ -83,12 +83,6 @@
 
 .fas.fa-star, .fas.fa-star-half-alt, .far.fa-star {
     color:darkorange;
-}
-
-.product-description-container {
-    /*max-width: 280px;*/
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 .image-navigation {
@@ -154,6 +148,12 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 1 calc(50% - 10px);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .product-thumbnail {
@@ -202,6 +202,41 @@
 
 
 
+
+
+.btn.back {
+    background-color: #d9ccc1;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 5px;
+}
+
+.btn.back:hover {
+    background-color: #f0f0f0;
+}
+
+/* Stil für das Font Awesome Icon */
+.btn.back i {
+    font-size: 30px;
+}
+
+.product-text h2 {
+    margin-bottom: 5px; /* Dies reduziert den Abstand nach dem Titel. Sie können den Wert je nach gewünschtem Abstand anpassen. */
+}
+
+.product-text p:first-of-type {
+    margin-top: 5px; /* Dies reduziert den Abstand vor der Marke. Der Selektor `:first-of-type` stellt sicher, dass nur das erste `p`-Element innerhalb von `.product-text` beeinflusst wird. */
+}
+
+.product-description-container {
+    border: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
 
 
 

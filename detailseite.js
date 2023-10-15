@@ -34,8 +34,9 @@ function showDetail(id) {
         <div class="product-details">
             <div class="product-text">
                 <h2>${productTitle}</h2>
+                <p>${productBrand}</p>
                 <div class="product-description-container">
-                    <p>${productDescription}</p>
+                    <span class="description-text">${productDescription}</span>
                 </div>
                 <div class="price-details">
                     <div class="price-discount">
@@ -47,7 +48,6 @@ function showDetail(id) {
                             <p class="highlighted-discount"> -${productDiscount}%</p>
                         </div>
                     </div>
-                    <p>Marke: ${productBrand}</p>
                     <p>Bewertung: ${productRatingStars}</p>
                     <a href="https://www.google.com/search?q=${encodeURIComponent(productTitle)}" target="_blank" class="addInfoButton">Weitere Infos</a>
                     <a href="#" onclick="addToCart(${json.id}, '${productTitle}', '${productPrice}')" class="addToCardButton">Zum Warenkorb hinzufügen</a>
