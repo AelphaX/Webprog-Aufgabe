@@ -106,10 +106,6 @@
     .cart-icon {
         margin-top: 0px;
     }
-    
-    .product-details {
-        flex-direction: column; /* Setzt die Hauptachse des Flex-Containers auf vertikal */
-    }
 
     .product-text, .price-discount {
         flex: 1; /* Stellt sicher, dass die Produktbeschreibung und der Preis den gesamten verfügbaren Raum einnehmen */
@@ -122,11 +118,10 @@
     }
 
     .product-image {
-        width: 200px; /* Setzt die Breite auf 150px */
+        width: 100%; /* Setzt die Breite auf 150px */
         height: 200px; /* Setzt die Höhe auf 150px */
         object-fit: cover; /* Sorgt dafür, dass das Bild den Container ausfüllt, ohne das Seitenverhältnis zu ändern */
         margin: 0 auto; /* Zentriert das Bild */
-        margin-top: 20px;
     }
 
    
@@ -139,12 +134,6 @@
         transform: scale(1.1);
         margin-top: 30px;
         width: 100%; 
-    }
-    
-    .image-container {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
     }
     
     
@@ -161,6 +150,7 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        max-height: 240px;
     }
     
     .product-thumbnail {
@@ -172,9 +162,6 @@
     
     .product-info {
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         height: 150px; /* Diese Höhe stellt sicher, dass es genügend Platz für längere Beschreibungen und den Button gibt */
     }
     
@@ -185,9 +172,23 @@
         padding: 0 20px 20px 20px;
         margin-right: -30px;
         margin-top: 10px;
+        flex-direction: column; /* Setzt die Hauptachse des Flex-Containers auf vertikal */
+        
+    }
+
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-top: 5px;
+        margin-bottom: 15px;
     }
 
     .category-display:nth-child(2){
         margin-top: 10px;
     }
+
+    
+
+
 }

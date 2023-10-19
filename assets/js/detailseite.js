@@ -35,9 +35,10 @@ function showDetail(id) {
             <div class="product-text">
                 <h2>${productTitle}</h2>
                 <p>${productBrand}</p>
-                <div class="product-description-container">
-                    <span class="description-text">${productDescription}</span>
-                </div>
+            <div class="product-description-container">
+                <span class="description-text">${productDescription}</span>
+            </div>
+            ${imagesHtml}
                 <div class="price-details">
                     <div class="price-discount">
                         <div>
@@ -53,7 +54,6 @@ function showDetail(id) {
                     <a href="#" onclick="addToCart(${json.id}, '${productTitle}', '${productPrice}')" class="addToCardButton">Zum Warenkorb hinzufügen</a>
                 </div>
             </div>
-            ${imagesHtml}
         </div>
         `;
 
