@@ -45,11 +45,6 @@
     color:darkorange;
 }
 
-.image-buttons {
-    display: flex;
-    gap: 10px;
-}
-
 .price-details {
     display: flex;
     flex-direction: column;

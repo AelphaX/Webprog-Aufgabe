@@ -1,4 +1,3 @@
-/* Grundlegende Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f3ef;
@@ -116,20 +115,6 @@ body {
 }
 
 
-
-/*#detailData a {
-    display: block;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #d9ccc1;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-}
-
-
-/* Modal allgemein */
 .modal {
     display: none; 
     position: fixed; 
