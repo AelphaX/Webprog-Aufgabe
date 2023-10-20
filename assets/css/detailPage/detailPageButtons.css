@@ -1,0 +1,63 @@
+
+
+.image-navigation button {
+    background: #d9ccc1; 
+    border: none; 
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.image-navigation button:hover {
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+.btn.back {
+    background-color: #d9ccc1;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 5px;
+}
+
+.btn.back:hover {
+    background-color: #f0f0f0;
+}
+
+
+.btn.back i {
+    font-size: 30px;
+}
+
+.view-product-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #d9ccc1;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-product-button:hover {
+    background-color: #f0f0f0;
+}
+
+.addInfoButton, .addToCardButton { 
+    padding: 10px; 
+    text-decoration: none;  
+    color: #000;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    background-color: #d9ccc1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.addInfoButton:hover, .addToCardButton:hover {
+    background-color: #f0f0f0;
+}
