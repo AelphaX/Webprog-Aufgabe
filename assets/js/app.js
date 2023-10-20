@@ -18,7 +18,6 @@ searchInput.addEventListener('input', () => {
     if (searchInput.value === '') {
         // Wenn das Suchfeld leer ist, verberge die Suchergebnisse
         searchResults.innerHTML = '';
-        document.getElementById('resultCount').innerText = '';
     } else {
         searchData();
     }
