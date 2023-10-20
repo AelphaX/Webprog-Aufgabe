@@ -14,18 +14,6 @@
     background-color: #f0f0f0;
 }
 
-.product-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.product-text {
-    flex: 1;
-    padding-right: 5px; /*5px*/
-    display: flex;
-    flex-direction: column;
-}
 
 .product-images {
     flex-basis: 200px;  /* Sie können dies an die gewünschte Breite anpassen */
@@ -33,18 +21,6 @@
     flex-direction: column;  /* Stapelt die Bilder vertikal */
     gap: 10px;  /* Fügt Abstand zwischen den Bildern hinzu */
 }
-
-
-.product-image {
-    width: 80%; /*100%*/
-    height: 250px;
-    object-fit: cover; /* Behält das Seitenverhältnis des Bildes bei, während es den Container füllt */
-    margin: auto; /* Zentriert das Bild horizontal */
-    border: solid #e0e0e0;
-}
-
-
-
 
 
 .price-discount {
@@ -85,16 +61,6 @@
     color:darkorange;
 }
 
-.image-navigation {
-    display: flex;
-    flex-direction: row; /* Lays out the buttons horizontally */
-    gap: 10px;
-    align-items: center; /* Vertically centers the buttons */
-    margin-top: 10px; /* Optional: Add some spacing between the image and the buttons */
-    justify-content: center;
-
-}
-
 
 .image-container {
     display: flex;
@@ -102,19 +68,6 @@
     align-items: center; /* Center the child elements horizontally */
     position: relative;
     padding-top: 20px;
-}
-
-.image-navigation button {
-    background: #d9ccc1; 
-    border: none; 
-    font-size: 20px;
-    padding: 10px 15px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-}
-
-.image-navigation button:hover {
-    background: rgba(255, 255, 255, 0.9); 
 }
 
 
@@ -227,13 +180,6 @@
     font-size: 30px;
 }
 
-.product-text h2 {
-    margin-bottom: 5px; /* Dies reduziert den Abstand nach dem Titel. Sie können den Wert je nach gewünschtem Abstand anpassen. */
-}
-
-.product-text p:first-of-type {
-    margin-top: 5px; /* Dies reduziert den Abstand vor der Marke. Der Selektor `:first-of-type` stellt sicher, dass nur das erste `p`-Element innerhalb von `.product-text` beeinflusst wird. */
-}
 
 .product-description-container {
     border: none;
