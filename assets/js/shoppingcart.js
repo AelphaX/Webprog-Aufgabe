@@ -1,5 +1,4 @@
-let cart = []; // Dies wird unsere Warenkorb-Datenstruktur sein
-
+let cart = [];
 
 function addToCart(id, title, price) {
     const existingProduct = cart.find(product => product.id === id);
@@ -13,14 +12,11 @@ function addToCart(id, title, price) {
     updateCartCount();
 }
 
-
-
 function removeFromCart(id) {
     cart = cart.filter(product => product.id !== id);
     updateCartUI();
-    updateCartCount(); // Aktualisieren Sie die Anzahl der Artikel im Warenkorb
+    updateCartCount();
 }
-
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -58,13 +54,9 @@ function updateCartUI() {
     document.getElementById('cartItems').innerHTML = cartHtml;
 }
 
-
-
-
 function closeCart() {
     document.getElementById('cartOverlay').style.display = 'none';
 }
-
 
 function clearCart() {
     cart = [];
@@ -89,8 +81,6 @@ function calculateTotalPrice() {
     });
     return totalPrice.toFixed(2);
 }
-
-
 
 function increaseQuantity(id) {
     const product = cart.find(p => p.id === id);

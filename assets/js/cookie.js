@@ -7,6 +7,6 @@ document.getElementById('declineCookies').addEventListener('click', function() {
 });
 
 // Beim Laden der Seite wird das Cookie-Bestätigungs-Popup immer angezeigt
-//window.onload = function() {
-    //document.getElementById('cookieConsentPopup').style.display = 'block';
-//}
+window.onload = function() {
+    document.getElementById('cookieConsentPopup').style.display = 'block';
+}

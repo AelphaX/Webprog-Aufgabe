@@ -26,3 +26,8 @@
 .cookie-consent-popup #declineCookies {
     background-color: #c0392b;
 }
+
+.cookie-consent-popup a {
+    color: #0073e6;
+    text-decoration: none;
+}

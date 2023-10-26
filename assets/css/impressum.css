@@ -36,3 +36,12 @@
 .impressum p {
     margin: 15px 0;
 }
+
+.linkimp {
+    color: black;
+    text-decoration: none; 
+}
+
+.bba {
+    font-weight: bold;
+}
