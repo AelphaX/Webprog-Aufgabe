@@ -8,7 +8,7 @@
     color: #ecf0f1;
     text-align: center;
     z-index: 1000;
-    display: none; /* Das Popup ist zunächst verborgen */
+    display: none;
 }
 
 .cookie-consent-popup button {

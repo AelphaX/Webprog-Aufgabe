@@ -1,7 +1,5 @@
 let currentImageIndex = 0;
 
-
-
 function showDetail(id) {
     fetch(`https://dummyjson.com/products/${id}`)
     .then(res => res.json())
@@ -28,7 +26,6 @@ function showDetail(id) {
             </div>
         </div>
         `;
-        
 
         let productDetailsHtml = `
         <div class="product-details">
@@ -59,7 +56,6 @@ function showDetail(id) {
 
         document.getElementById('detailData').innerHTML = productDetailsHtml;
         
-
         return getRelatedProducts(productCategory, id);
     })
 
@@ -76,7 +72,7 @@ function showDetail(id) {
                 </div>
             `;
         });
-        relatedProductsHtml += '</div></div>';  // Schließen Sie die product-grid und related-products Divs
+        relatedProductsHtml += '</div></div>';
     
         document.getElementById('detailData').innerHTML += relatedProductsHtml;
         document.getElementById('searchSection').style.display = 'none';
@@ -85,8 +81,6 @@ function showDetail(id) {
         attachFullscreenListeners(); 
     })
     
-    
-
     .catch(error => {
         console.error("Fehler beim Abrufen der Detaildaten:", error);
         document.getElementById('detailData').innerHTML = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
@@ -97,29 +91,22 @@ function getRelatedProducts(category, currentProductId) {
     return fetch(`https://dummyjson.com/products/category/${category}`)
         .then(res => res.json())
         .then(response => {
-            // Stellen Sie sicher, dass "products" vorhanden ist und ein Array ist
             if (response.products && Array.isArray(response.products)) {
-                // Produkte filtern, die nicht das aktuelle Produkt sind
                 return response.products.filter(product => product.id !== currentProductId);
             }
-            return []; // Leeres Array zurückgeben, wenn "products" nicht vorhanden oder kein Array ist
+            return [];
         });
 }
-
-
-
-
-
 
 function ratingToStars(rating) {
     let stars = '';
     for (let i = 1; i <= 5; i++) {
         if (rating >= i) {
-            stars += '<i class="fas fa-star"></i>';  // vollen Stern hinzufügen
+            stars += '<i class="fas fa-star"></i>';
         } else if (rating > i - 0.75) {
-            stars += '<i class="fas fa-star-half-alt"></i>';  // halben Stern hinzufügen
+            stars += '<i class="fas fa-star-half-alt"></i>';
         } else {
-            stars += '<i class="far fa-star"></i>';  // leeren Stern hinzufügen
+            stars += '<i class="far fa-star"></i>';
         }
     }
     return stars;
@@ -143,25 +130,24 @@ function attachFullscreenListeners() {
             if (!document.fullscreenElement) {
                 if (img.requestFullscreen) {
                     img.requestFullscreen();
-                } else if (img.mozRequestFullScreen) { /* Firefox */
+                } else if (img.mozRequestFullScreen) {
                     img.mozRequestFullScreen();
-                } else if (img.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                } else if (img.webkitRequestFullscreen) {
                     img.webkitRequestFullscreen();
-                } else if (img.msRequestFullscreen) { /* IE/Edge */
+                } else if (img.msRequestFullscreen) {
                     img.msRequestFullscreen();
                 }
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
-                } else if (document.mozCancelFullScreen) { /* Firefox */
+                } else if (document.mozCancelFullScreen) {
                     document.mozCancelFullScreen();
-                } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                } else if (document.webkitExitFullscreen) {
                     document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { /* IE/Edge */
+                } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
             }
         });
     });
 };
-

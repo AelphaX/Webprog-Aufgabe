@@ -1,22 +1,21 @@
 document.getElementById('searchInput').addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
-        searchData(); // Die searchData-Funktion aufrufen, wenn "Enter" gedrückt wird
+        searchData();
     }
 });
 
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 
-let isFirstInput = true; // Eine Flagge, um den ersten Input zu verfolgen
+let isFirstInput = true;
 
 searchInput.addEventListener('input', () => {
     if (isFirstInput) {
         isFirstInput = false;
-        return; // Ignoriere den ersten Input
+        return;
     }
 
     if (searchInput.value === '') {
-        // Wenn das Suchfeld leer ist, verberge die Suchergebnisse
         searchResults.innerHTML = '';
     } else {
         searchData();
@@ -46,14 +45,11 @@ async function searchData() {
                     </div>`;
             });
             
-
             const resultCount = filteredProducts.length;
             
-
             if (resultsHtml === '') {
                 resultsHtml = '<div class="error-message">Keine Produkte gefunden.</div>';
             } else {
-                // Wenn es Suchergebnisse gibt, fügen Sie die Klasse hinzu
                 searchResults.classList.add('has-results');
             }
 
@@ -62,7 +58,6 @@ async function searchData() {
             console.log("Keine Produkte gefunden.");
             searchResults.innerHTML = '<div class="error-message">Keine Produkte gefunden.</div>';
             document.getElementById('resultCount').innerText = '';
-            // Wenn es keine Suchergebnisse gibt, entfernen Sie die Klasse
             searchResults.classList.remove('has-results');
         }
         
@@ -70,7 +65,6 @@ async function searchData() {
         console.error("Fehler beim Abrufen der Produkte:", error);
         searchResults.innerHTML = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
         document.getElementById('resultCount').innerText = '';
-        // Im Fehlerfall die Klasse entfernen
         searchResults.classList.remove('has-results');
     }
 }
@@ -79,10 +73,7 @@ async function searchData() {
 
 
 function updateSearchSuggestions(suggestions) {
-    // Lösche vorhandene Suchvorschläge
     searchSuggestions.innerHTML = '';
-
-    // Füge die neuen Suchvorschläge hinzu
     suggestions.forEach(suggestion => {
         const option = document.createElement('option');
         option.value = suggestion;

@@ -1,5 +1,3 @@
-
-
 .image-navigation button {
     background: #d9ccc1; 
     border: none; 
@@ -25,7 +23,6 @@
 .btn.back:hover {
     background-color: #f0f0f0;
 }
-
 
 .btn.back i {
     font-size: 30px;

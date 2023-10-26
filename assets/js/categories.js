@@ -2,8 +2,8 @@ function loadCategories() {
     fetch('https://dummyjson.com/products')
     .then(res => res.json())
     .then(data => {
-        const categories = new Set(data.products.map(product => product.category)); // Erstellt ein Set von einzigartigen Kategorien
-        const sideNav = document.getElementById('sideNav');  // Stellen Sie sicher, dass 'sideNav' die richtige ID für Ihr Navigationsmenü ist.
+        const categories = new Set(data.products.map(product => product.category));
+        const sideNav = document.getElementById('sideNav'); 
 
         categories.forEach(category => {
             const categoryLink = document.createElement('a');
@@ -13,7 +13,7 @@ function loadCategories() {
                 filterProductsByCategory(category);
             };
             const placeholder = document.getElementById('categoryPlaceholder');
-            sideNav.insertBefore(categoryLink, placeholder);  // Fügt die Kategorie direkt vor dem Platzhalter hinzu
+            sideNav.insertBefore(categoryLink, placeholder);
         });
         
     });
@@ -44,7 +44,6 @@ function displayProducts(products) {
     if (resultsHtml === '') {
         resultsHtml = '<div class="error-message">Keine Produkte gefunden.</div>';
     } else {
-        // Wenn es Suchergebnisse gibt, fügen Sie die Klasse hinzu
         document.getElementById('searchResults').classList.add('has-results');
     }
 
@@ -53,8 +52,7 @@ function displayProducts(products) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadCategories(); // Laden der Kategorien beim Start
-    // Sie können hier auch andere Initialisierungscode hinzufügen.
+    loadCategories();
 });
 
 function capitalizeFirstLetter(string) {

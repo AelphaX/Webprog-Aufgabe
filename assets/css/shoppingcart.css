@@ -1,14 +1,11 @@
 .cart-icon {
     position: absolute;
-    top: 25%;  /* Ändern Sie diesen Wert, um die vertikale Position anzupassen */
+    top: 25%;
     right: 10px;
     transform: translateY(-50%);
     margin-right: 20px;
     margin-top: -20px;
 }
-
-
-
 
 #cartCount {
     position: absolute;
@@ -19,7 +16,6 @@
     border-radius: 50%;
     padding: 2px 6px;
     font-size: 12px;
-    
 }
 
 #cartOverlay {
@@ -44,17 +40,17 @@
     display: inline-block;
     background-color: #d9ccc1;
     color: black;
-    padding: 10px 20px; /* Ich habe hier ein bisschen vertikales Padding hinzugefügt, um den Button größer zu machen. */
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
     text-align: center;
-    margin-top: 10px; /* Ein bisschen Abstand zum oberen Element hinzufügen */
-    transition: background-color 0.3s; /* Für einen sanften Hover-Effekt */
+    margin-top: 10px;
+    transition: background-color 0.3s;
     border-radius: 5px;
 }
 
 #cartOverlay button:hover {
-    background-color: #c2b6a4; /* Eine etwas dunklere Farbe beim Überfahren mit der Maus */
+    background-color: #c2b6a4;
 }
 
 .fas.fa-trash {
@@ -62,14 +58,12 @@
     display:block;
 }
 
-
 .total-price {
     margin-top: 20px;
     font-weight: bold;
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-
 
 .cart-item {
     display: flex;
@@ -101,7 +95,6 @@
     line-height: 8px;
     padding: 0;
     display: flex;
-   
     padding-right: 20px;
 }
 
@@ -110,12 +103,12 @@
 }
 
 .cart-buttons {
-    display: flex;  /* Verwenden Sie Flexbox, um die Buttons nebeneinander anzuzeigen */
-    justify-content: space-between;  /* Verteilen Sie die Buttons gleichmäßig im Container */
-    margin-top: 20px;  /* Geben Sie etwas Abstand nach oben */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 #cartOverlay button {
-    flex: 1;  /* Lassen Sie beide Buttons die gleiche Breite haben */
-    margin: 0 10px;  /* Geben Sie etwas seitlichen Abstand zwischen den Buttons */
+    flex: 1;
+    margin: 0 10px;
 }

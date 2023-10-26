@@ -23,39 +23,38 @@
 
     #searchResults div {
         width: 100%; 
-        margin-right: 0; /* Setzt den rechten Abstand zurück auf 0, sodass das Suchergebnis die volle Breite hat */
-        float: none; /* Setzt den float zurück auf den Standardwert */
+        margin-right: 0;
+        float: none;
     }
 
     .impressum-container {
-        padding: 10px; /* Reduziert den Abstand um den Text herum */
-        font-size: 80%; /* Verkleinert die Schriftgröße um 50% */
+        padding: 10px;
+        font-size: 80%;
     }
 
     #searchInput {
-        font-size: 15px; /* Vergrößert die Schriftgröße der Suchleiste */
-        height: 48px; /* Vergrößert die Höhe der Suchleiste */
+        font-size: 15px;
+        height: 48px;
     }
 
     .btn {
-        font-size: 0; /* Verkleinert die Schriftgröße des Suchen-Buttons um 30% */
-        height: 28px; /* Verkleinert die Höhe des Suchen-Buttons um 30% */
+        font-size: 0;
+        height: 28px;
         /*text-align: center; /* Zentriert den Text horizontal auf dem Suchen-Button */
-        padding: 0 5px; /* Verringert den seitlichen Abstand des Buttons */
-        width: 40px; /* Setzt die Breite des Buttons auf 40px */
+        padding: 0 5px;
+        width: 40px;
         background-color: white;
     }
 
     .btn.search::before {
         content: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 612.08 612.08"><g><path d="M237.927,0C106.555,0,0.035,106.52,0.035,237.893c0,131.373,106.52,237.893,237.893,237.893 c50.518,0,97.368-15.757,135.879-42.597l0.028-0.028l176.432,176.433c3.274,3.274,8.48,3.358,11.839,0l47.551-47.551 c3.274-3.274,3.106-8.703-0.028-11.838L433.223,373.8c26.84-38.539,42.597-85.39,42.597-135.907C475.82,106.52,369.3,0,237.927,0z M237.927,419.811c-100.475,0-181.918-81.443-181.918-181.918S137.453,55.975,237.927,55.975 s181.918,81.443,181.918,181.918 S338.402,419.811,237.927,419.811z" /></g></svg>');
         display: inline-block;
-        width: 24px; /* Stellen Sie sicher, dass Sie Breite und Höhe angeben, damit das SVG angezeigt wird */
+        width: 24px;
         height: 24px;
         margin-right: 2px;
         vertical-align: middle;
     }
     
-
     .btn.back {
         display: inline-block;
         background-color: #d9ccc1;
@@ -69,7 +68,7 @@
 
     .btn, #searchInput {
         height: 40px;
-        vertical-align: middle; /* Zentriert die Elemente vertikal */
+        vertical-align: middle;
     }
 
     .menu-button {
@@ -77,27 +76,26 @@
         margin-top: 0px;
     }
     .side-nav a {
-        font-size: 17.5px; /* 70% von 25px (was 30% Verkleinerung entspricht) */
+        font-size: 17.5px;
     }
 
     .title {
-        font-size: 24px; /* Beispielwert, passe ihn nach Bedarf an */
+        font-size: 24px;
         margin-top: 0px; 
     }
+
     #detailSection {
-        transform: scale(0.9); /* Verkleinert den Inhalt um 30% */
-        transform-origin: top left; /* Setzt den Ursprung der Transformation auf die obere linke Ecke */
+        transform: scale(0.9);
+        transform-origin: top left;
     }
 
-    
     .panorama {
         height: 125px;  
         background-position: center top; 
     }
     
     .container {
-        /* ... Ihre bisherigen Stile ... */
-        margin-top: 2px; /* Verschiebt den Container um die Höhe des Bildes nach oben */
+        margin-top: 2px;
     }
 
     .cart-icon {
@@ -105,23 +103,21 @@
     }
 
     .product-text, .price-discount {
-        flex: 1; /* Stellt sicher, dass die Produktbeschreibung und der Preis den gesamten verfügbaren Raum einnehmen */
-        width: 100%; /* Stellt sicher, dass diese Elemente die gesamte Breite des Containers einnehmen */
+        flex: 1;
+        width: 100%; 
     }
 
     .product-images {
-        padding-top: 200px; /* Setzt den Abstand am oberen Rand, um die Bilder tiefer zu positionieren */
-        align-items: center; /* Zentriert die Bilder horizontal */
+        padding-top: 200px;
+        align-items: center;
     }
 
     .product-image {
-        width: 100%; /* Setzt die Breite auf 150px */
-        height: 200px; /* Setzt die Höhe auf 150px */
-        object-fit: cover; /* Sorgt dafür, dass das Bild den Container ausfüllt, ohne das Seitenverhältnis zu ändern */
-        margin: 0 auto; /* Zentriert das Bild */
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin: 0 auto;
     }
-
-   
 
     .related-products {
         flex-direction: column;
@@ -132,7 +128,6 @@
         margin-top: 30px;
         width: 100%; 
     }
-    
     
     .product-grid {
         display: flex;
@@ -151,25 +146,24 @@
     }
     
     .product-thumbnail {
-        height: 120px; /* Hier festlegen, wie hoch die Bilder sein sollen */
-        width: 100%; /* Sorgt dafür, dass das Bild die gesamte Breite des Containers einnimmt */
-        object-fit: cover; /* Das Bild wird so zugeschnitten, dass es den Container füllt, ohne dass das Seitenverhältnis verzerrt wird */
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
         overflow: hidden;
     }
     
     .product-info {
         flex: 1;
-        height: 150px; /* Diese Höhe stellt sicher, dass es genügend Platz für längere Beschreibungen und den Button gibt */
+        height: 150px;
     }
     
-
     .product-details {
         border: 1px solid #d3d3d3;
         border-radius: 5px;
         padding: 0 20px 20px 20px;
         margin-right: -30px;
         margin-top: 10px;
-        flex-direction: column; /* Setzt die Hauptachse des Flex-Containers auf vertikal */
+        flex-direction: column;
         
     }
 
@@ -183,8 +177,5 @@
     .category-display:nth-child(2){
         margin-top: 10px;
     }
-
-    
-
 
 }

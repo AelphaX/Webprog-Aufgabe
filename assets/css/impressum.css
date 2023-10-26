@@ -27,9 +27,9 @@
 }
 
 .impressum {
-    max-width: 800px; /* Begrenzt die Breite des Impressums */
-    margin: 0 auto; /* Zentriert das Impressum horizontal */
-    line-height: 0.5; /* Zeilenabstand im Impressum */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 0.5;
     position: relative;
 }
 
