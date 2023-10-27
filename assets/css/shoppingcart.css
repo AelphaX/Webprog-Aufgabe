@@ -7,6 +7,7 @@
     margin-top: -20px;
 }
 
+/* Stil für die Anzeige der Warenkorb-Anzahl */
 #cartCount {
     position: absolute;
     top: -5px;
@@ -36,6 +37,7 @@
     margin-bottom: 20px;
 }
 
+/* Stil für die Buttons im Warenkorb-Overlay */
 #cartOverlay button {
     display: inline-block;
     background-color: #d9ccc1;
@@ -47,6 +49,8 @@
     margin-top: 10px;
     transition: background-color 0.3s;
     border-radius: 5px;
+    flex: 1;
+    margin: 0 10px;
 }
 
 #cartOverlay button:hover {
@@ -83,6 +87,7 @@
     padding-right: 20px;
 }
 
+/* Stil für die Buttons in den Steuerungselementen */
 .cart-controls button {
     width: 25px;
     height: 25px;
@@ -106,9 +111,4 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-}
-
-#cartOverlay button {
-    flex: 1;
-    margin: 0 10px;
 }

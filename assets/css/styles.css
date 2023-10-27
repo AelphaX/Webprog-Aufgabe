@@ -1,3 +1,4 @@
+/* Setze die Schriftart und Hintergrundfarbe für den gesamten Body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f3ef;
@@ -26,13 +27,14 @@ body {
     padding: 10px;
 }
 
-.btn, #searchInput, .result-count {
+.btn, #searchInput {
     height: 40px;
     border-radius: 5px;
     line-height: 40px;
     vertical-align: middle;
 }
 
+/* Stil für Suchbutton */
 .btn {
     display: inline-block;
     background-color: #d9ccc1;
@@ -62,12 +64,6 @@ body {
     cursor: default;
 }
 
-.search-bar {
-    align-items: center;
-    gap: 12px;
-    justify-content: flex-start;
-}
-
 #searchResults.has-results {
     margin-top: 20px;
 }
@@ -86,6 +82,7 @@ body {
     text-align: center;
 }
 
+/* Hintergrundbild für Panorama mit Stil */
 .panorama {
     background-image: url('../img/panoramaaufnahme-des-kanals-unterhalb-des-pukaki-sees-in-twisel-umgeben-von-bergen.jpg');
     background-size: cover;
@@ -102,12 +99,14 @@ body {
 }
 
 .search-bar {
+    justify-content: flex-start;
     display: flex;
     align-items: center;
     gap: 12px;
     position: relative;
 }
 
+/* Stil für ein Modalfenster */
 .modal {
     display: none; 
     position: fixed; 
@@ -149,6 +148,7 @@ body {
     cursor: pointer;
 }
 
+/* Stil für die Ergebnisse in zwei Spalten */
 #searchResults div{
     width: 49%; 
     box-sizing: border-box; 
@@ -190,6 +190,7 @@ header {
     position: relative;
 }
 
+/* Stil für Produkt-Suchergebnisliste */
 .product-searchlist {
     display: flex;
     align-items: center;

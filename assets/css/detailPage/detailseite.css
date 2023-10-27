@@ -35,8 +35,10 @@
     align-items: center;
 }
 
-.highlighted-discount {
+.discount-container {
     color: red;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .fas.fa-star, .fas.fa-star-half-alt, .far.fa-star {
