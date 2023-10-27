@@ -6,6 +6,7 @@
     position: relative;
 }
 
+/* Stil für das Menü-Symbol */
 .menu-button {
     font-size: 30px;
     cursor: pointer;
@@ -47,6 +48,8 @@
     transform: translateX(10px);
 }
 
+
+/* Stil für den Schließen-Button der Seiten-Navigation */
 .close-button {
     position: absolute;
     top: 20px;

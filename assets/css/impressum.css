@@ -1,3 +1,4 @@
+/*Stile für Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -18,6 +19,8 @@
     font-size: 24px;
     color: #C13584;
 }
+
+/* Stil für den Impressum-Container und -Element*/
 
 .impressum-container {
     background-color: #333;

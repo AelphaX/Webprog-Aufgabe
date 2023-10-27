@@ -5,6 +5,7 @@
     gap: 10px;
 }
 
+/* Stil für den Container der Preis- und Rabattinformationen */
 .price-discount {
     display: flex;
     justify-content: space-between;
@@ -41,6 +42,7 @@
     font-size: 1.1em;
 }
 
+/* Stil für Sternsymbole */
 .fas.fa-star, .fas.fa-star-half-alt, .far.fa-star {
     color:darkorange;
 }
@@ -65,6 +67,7 @@
     gap: 20px;
 }
 
+/* Stil für einzelne Produktkarten */
 .product-card {
     min-width: 100px;
     max-width: 165px;
@@ -111,6 +114,7 @@
     margin-top: 5px;
 }
 
+/* Stil für den Container der Produktbeschreibung */
 .product-description-container {
     border: none;
     word-wrap: break-word;
@@ -160,6 +164,7 @@
     padding-top: 20px;
 }
 
+/* Stil für das Produktbild */
 .product-image {
     width: 80%;
     height: 250px;

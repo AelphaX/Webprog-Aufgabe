@@ -1,3 +1,4 @@
+/* Stil für die Navigations-Schaltflächen in der Bildergalerie */
 .image-navigation button {
     background: #d9ccc1; 
     border: none; 
@@ -43,6 +44,7 @@
     background-color: #f0f0f0;
 }
 
+/* Stil für die Schaltflächen "Weitere Infos" und "Zum Warenkorb hinzufügen" */
 .addInfoButton, .addToCardButton { 
     padding: 10px; 
     text-decoration: none;  
