@@ -1,9 +1,12 @@
+// Initialisieren des Index der aktuellen angezeigten Produktbilder
 let currentImageIndex = 0;
 
+// Funktion zur Anzeige von Produktdetails basierend auf der Produkt-ID
 function showDetail(id) {
     fetch(`https://dummyjson.com/products/${id}`)
     .then(res => res.json())
     .then(json => {
+        // Extrahieren der Produktinformationen aus der JSON-Antwort
         const productTitle = json.title;
         const productDescription = json.description;
         const productPrice = `${json.price.toFixed(2)} €`;
@@ -17,6 +20,7 @@ function showDetail(id) {
         const originalPrice = (json.price + discountedAmount).toFixed(2);
         const productCategory = json.category;
 
+        // HTML für Bilder und Produktdetails generieren
         let imagesHtml = `
         <div class="image-container">
             <img src="${productImages[currentImageIndex]}" alt="${productTitle} Image" class="product-image" id="currentImage">
@@ -43,7 +47,7 @@ function showDetail(id) {
                             <p class="original-price">UVP: ${originalPrice} €</p>
                         </div>
                         <div class="discount-container">
-                            <p class="highlighted-discount"> -${productDiscount}%</p>
+                            <p class "highlighted-discount"> -${productDiscount}%</p>
                         </div>
                     </div>
                     <p>Bewertung: ${productRatingStars}</p>
@@ -56,9 +60,9 @@ function showDetail(id) {
 
         document.getElementById('detailData').innerHTML = productDetailsHtml;
         
+        // Ähnliche Produkte abrufen und anzeigen
         return getRelatedProducts(productCategory, id);
     })
-
     .then(relatedProducts => {
         let relatedProductsHtml = '<div class="related-products"><h3>Ähnliche Produkte:</h3><div class="product-grid">';
         relatedProducts.forEach(product => {
@@ -73,24 +77,25 @@ function showDetail(id) {
             `;
         });
         relatedProductsHtml += '</div></div>';
-    
+
         document.getElementById('detailData').innerHTML += relatedProductsHtml;
         document.getElementById('searchSection').style.display = 'none';
         document.getElementById('detailSection').style.display = 'block';
 
         attachFullscreenListeners(); 
     })
-    
     .catch(error => {
         console.error("Fehler beim Abrufen der Detaildaten:", error);
         document.getElementById('detailData').innerHTML = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
     });
 }
 
+// Funktion zum Abrufen ähnlicher Produkte basierend auf der Kategorie und der aktuellen Produkt-ID
 function getRelatedProducts(category, currentProductId) {
     return fetch(`https://dummyjson.com/products/category/${category}`)
         .then(res => res.json())
         .then(response => {
+            // Filtern der ähnlichen Produkte, indem das aktuelle Produkt ausgeschlossen wird
             if (response.products && Array.isArray(response.products)) {
                 return response.products.filter(product => product.id !== currentProductId);
             }
@@ -98,6 +103,7 @@ function getRelatedProducts(category, currentProductId) {
         });
 }
 
+// Funktion zur Umwandlung einer Bewertung in Sternsymbole
 function ratingToStars(rating) {
     let stars = '';
     for (let i = 1; i <= 5; i++) {
@@ -112,6 +118,7 @@ function ratingToStars(rating) {
     return stars;
 }
 
+// Funktion zur Änderung des angezeigten Bilds
 function changeImage(direction, button) {
     const images = button.getAttribute('data-images').split('|');
     currentImageIndex += direction;
@@ -123,6 +130,7 @@ function changeImage(direction, button) {
     document.getElementById('currentImage').src = images[currentImageIndex];
 }
 
+// Funktion zum Anhängen von Event-Listenern für den Vollbildmodus auf verschiedenen Browsern
 function attachFullscreenListeners() {
     let images = document.querySelectorAll(".product-image");
     images.forEach(img => {

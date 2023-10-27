@@ -212,6 +212,7 @@ header {
     margin-right: 15px;
     object-fit: cover;
     border-radius: 5px;
+    border: 1px solid lightgray;
 }
 
 .product-infolist {
