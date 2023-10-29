@@ -20,13 +20,13 @@
 
 .highlighted-price, .highlighted-discount {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 20px;
     margin: 0;
 }
 
 .original-price {
     text-decoration: line-through;
-    font-size: 0.8em;
+    font-size: 12.8px;
     margin: 0;  
     color: #888;
 }
@@ -39,7 +39,7 @@
 .discount-container {
     color: red;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 20px;
 }
 
 /* Stil für Sternsymbole */
@@ -69,8 +69,6 @@
 
 /* Stil für einzelne Produktkarten */
 .product-card {
-    min-width: 100px;
-    max-width: 165px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -80,12 +78,14 @@
     display: flex;
     flex-direction: column;
     height: 265px;
+    flex-basis: 150px;
 }
 
 .product-thumbnail {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    border: 2px solid lightgray;
 }
 
 .product-info {
@@ -93,16 +93,19 @@
     text-align: center;
 }
 
+/* Stilregeln für Webkit-basierte Browser (z. B. Chrome) */
 .product-image:-webkit-full-screen {
     width: 100%;
     height: 100%;
 }
 
+/* Stilregeln für Firefox-Browser im Vollbildmodus */
 .product-image:-moz-full-screen {
     width: 100%;
     height: 100%;
 }
 
+/* Stilregeln für den Vollbildmodus */
 .product-image:fullscreen {
     width: 100%;
     height: 100%;
