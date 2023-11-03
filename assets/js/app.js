@@ -98,16 +98,6 @@ document.getElementById('closeButton').addEventListener('click', function () {
     closeNav();
 });
 
-// Funktion zum Öffnen des Seitenmenüs
-function openNav() {
-    document.getElementById("sideNav").style.width = "250px";
-}
-
-// Funktion zum Schließen des Seitenmenüs
-function closeNav() {
-    document.getElementById("sideNav").style.width = "0";
-}
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const titleElement = document.querySelector('.title');
     // Event-Listener für 'click' hinzufügen, der die Seite neu lädt

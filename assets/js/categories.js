@@ -1,35 +1,3 @@
-// Funktion zum Laden der Kategorien mithilfe von Fetch-API
-function loadCategories() {
-    fetch('https://dummyjson.com/products')
-        .then(res => res.json())
-        .then(data => {
-            // Extrahiere eindeutige Kategorien aus den Produktdaten
-            const categories = new Set(data.products.map(product => product.category));
-            const sideNav = document.getElementById('sideNav');
-
-            // Schleife durch die Kategorien und erstelle Links im Seiten-Navigationsmenü
-            categories.forEach(category => {
-                const categoryLink = document.createElement('a');
-                categoryLink.innerText = capitalizeFirstLetter(category);
-                categoryLink.href = "#";
-                categoryLink.onclick = function () {
-                    filterProductsByCategory(category);
-                };
-                const placeholder = document.getElementById('categoryPlaceholder'); // Hole das Platzhalter-Element
-                sideNav.insertBefore(categoryLink, placeholder); // Füge den Link vor den Platzhalter ein
-            });
-        });
-}
-
-// Funktion zum Filtern von Produkten nach Kategorie
-function filterProductsByCategory(category) {
-    fetch('https://dummyjson.com/products')
-        .then(res => res.json())
-        .then(data => {
-            const filteredProducts = data.products.filter(product => product.category === category);
-            displayProducts(filteredProducts);
-        });
-}
 
 // Funktion zum Anzeigen der Produkte
 function displayProducts(products) {
@@ -54,10 +22,6 @@ function displayProducts(products) {
 
     document.getElementById('searchResults').innerHTML = resultsHtml;
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    loadCategories();
-});
 
 // Funktion zum Großschreiben des ersten Buchstabens eines Wortes
 function capitalizeFirstLetter(string) {
