@@ -5,6 +5,7 @@
     transform: translateY(-50%);
     margin-right: 20px;
     margin-top: -20px;
+    cursor: pointer;
 }
 
 /* Stil für die Anzeige der Warenkorb-Anzahl */

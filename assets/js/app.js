@@ -1,5 +1,5 @@
 // Eventlistener für Tastenanschläge auf dem Sucheingabefeld
-document.getElementById('searchInput').addEventListener('keyup', function(event) {
+document.getElementById('searchInput').addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         searchData();
     }
@@ -49,9 +49,9 @@ async function searchData() {
                         </div>
                     </div>`;
             });
-            
+
             const resultCount = filteredProducts.length;
-            
+
             if (resultsHtml === '') {
                 resultsHtml = '<div class="error-message">Keine Produkte gefunden.</div>';
             } else {
@@ -64,7 +64,7 @@ async function searchData() {
             searchResults.innerHTML = '<div class="error-message">Keine Produkte gefunden.';
             searchResults.classList.remove('has-results');
         }
-        
+
     } catch (error) {
         console.error("Fehler beim Abrufen der Produkte:", error);
         searchResults.innerHTML = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
@@ -89,12 +89,12 @@ function goBack() {
 }
 
 // Eventlistener für das Menü öffnen
-document.getElementById('menuButton').addEventListener('click', function() {
+document.getElementById('menuButton').addEventListener('click', function () {
     openNav();
 });
 
 // Eventlistener für das Menü schließen
-document.getElementById('closeButton').addEventListener('click', function() {
+document.getElementById('closeButton').addEventListener('click', function () {
     closeNav();
 });
 
@@ -107,3 +107,11 @@ function openNav() {
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const titleElement = document.querySelector('.title');
+    // Event-Listener für 'click' hinzufügen, der die Seite neu lädt
+    titleElement.addEventListener('click', () => {
+        window.location.reload();
+    });
+});
