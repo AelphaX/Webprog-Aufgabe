@@ -4,14 +4,17 @@ function openNav() {
 }
 
 // Eventlistener für das Menü öffnen
-document.getElementById('menuButton').addEventListener('click', function () {
+document.getElementById('menuButton').addEventListener('click', function(event) {
     openNav();
+    event.stopPropagation();  // Verhindert, dass das Event weitergeleitet wird
 });
 
 // Eventlistener für das Menü schließen
-document.getElementById('closeButton').addEventListener('click', function () {
+document.getElementById('closeButton').addEventListener('click', function(event) {
     closeNav();
+    event.stopPropagation();  // Verhindert, dass das Event weitergeleitet wird
 });
+
 
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";

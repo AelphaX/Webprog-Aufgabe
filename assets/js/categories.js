@@ -59,3 +59,13 @@ function loadCategoriesS() {
 document.addEventListener('DOMContentLoaded', function () {
     loadCategoriesS();
 });
+
+// Funktion zum Filtern von Produkten nach Kategorie
+function filterProductsByCategory(category) {
+    fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => {
+            const filteredProducts = data.products.filter(product => product.category === category);
+            displayProducts(filteredProducts);
+        });
+}
