@@ -1,8 +1,3 @@
-// Eventlistener für das Menü schließen
-document.getElementById('closeButton').addEventListener('click', function () {
-    closeNav();
-});
-
 // Funktion zum Öffnen des Seitenmenüs
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
@@ -17,6 +12,10 @@ document.getElementById('menuButton').addEventListener('click', function () {
 document.getElementById('closeButton').addEventListener('click', function () {
     closeNav();
 });
+
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
+}
 
 
 // Funktion zum Laden der Kategorien mithilfe von Fetch-API
@@ -45,3 +44,4 @@ function loadCategories() {
 document.addEventListener('DOMContentLoaded', function () {
     loadCategories();
 });
+

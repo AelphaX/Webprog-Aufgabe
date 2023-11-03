@@ -88,16 +88,6 @@ function goBack() {
     document.getElementById('detailSection').style.display = 'none';
 }
 
-// Eventlistener für das Menü öffnen
-document.getElementById('menuButton').addEventListener('click', function () {
-    openNav();
-});
-
-// Eventlistener für das Menü schließen
-document.getElementById('closeButton').addEventListener('click', function () {
-    closeNav();
-});
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const titleElement = document.querySelector('.title');
     // Event-Listener für 'click' hinzufügen, der die Seite neu lädt
