@@ -43,12 +43,12 @@ function loadCategoriesS() {
                 const representativeImage = representativeProduct ? representativeProduct.thumbnail : 'default-image-url.jpg';
 
                 resultsHtml += `
-            <div class="product-searchlist category-display" onclick="filterProductsByCategory('${category}')">
-                <img src="${representativeImage}" alt="${capitalizeFirstLetter(category)}" class="product-thumbnaillist">
-                <div class="product-infolist">
-                    <button class="product-title-buttonlist">${capitalizeFirstLetter(category)}</button>
-                </div>
-            </div>`;
+                    <div class="product-searchlist category-display" onclick="filterProductsByCategory('${category}')">
+                        <img src="${representativeImage}" alt="${capitalizeFirstLetter(category)}" class="product-thumbnaillist">
+                        <div class="product-infolist">
+                            <button class="product-title-buttonlist">${capitalizeFirstLetter(category)}</button>
+                        </div>
+                    </div>`;
             });
 
             document.getElementById('searchResults').innerHTML = resultsHtml; // Füge das generierte HTML zu den Suchergebnissen hinzu
